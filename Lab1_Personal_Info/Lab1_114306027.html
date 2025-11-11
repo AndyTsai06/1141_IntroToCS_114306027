@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1_114306027 - Personal Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #dfe7fd;
+            text-align: center;
+        }
+        textarea {
+            width: 95%;
+            height: 90px;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Personal Information</h1>
+
+    <table border="1">
+        <!-- 第一列：表格標題跨三欄 -->
+        <tr>
+            <th colspan="3">Personal Information Table</th>
+        </tr>
+
+        <tr>
+            <!-- 第一欄：個人照片跨三列 -->
+            <td rowspan="3" align="center">
+                <img src="personal_photo.jpg" alt="personal photo" width="120"><br>
+                <i>personal photo</i>
+            </td>
+
+            <!-- 第二欄：姓名與性別 -->
+            <td>
+                Name: 蔡睿恩<br><br>
+                Student ID: 114306027<br><br>
+                Gender:
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other
+            </td>
+
+            <!-- 第三欄：生日 -->
+            <td>
+                Birthday:
+                <input type="date" name="birthday">
+            </td>
+        </tr>
+
+        <tr>
+            <!-- 第二列 -->
+            <td>
+                County:
+                <select name="county">
+                    <option value="taipei">Taipei</option>
+                    <option value="tainan">Tainan</option>
+                    <option value="taichung">Taichung</option>
+                    <option value="taoyuan">Taoyuan</option>
+                </select>
+            </td>
+            <td>
+                E-mail:
+                <input type="email" name="email" placeholder="example@email.com">
+            </td>
+        </tr>
+
+        <tr>
+            <!-- 第三列：空白 -->
+            <td colspan="2"></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+        <tr>
+            <th colspan="2">Hobby & Skills</th>
+        </tr>
+
+        <tr>
+            <td><b>Hobby</b></td>
+            <td>
+                <input type="checkbox" name="hobby" value="swimming">Swimming
+                <input type="checkbox" name="hobby" value="volleyball">Volleyball
+                <input type="checkbox" name="hobby" value="movie">Movie
+                <input type="checkbox" name="hobby" value="game">Game
+                <input type="checkbox" name="hobby" value="sleep">Sleep
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Skill</b></td>
+            <td>
+                <input type="checkbox" name="skill" value="java">Java
+                <input type="checkbox" name="skill" value="html">HTML
+                <input type="checkbox" name="skill" value="python">Python
+                <input type="checkbox" name="skill" value="office">Microsoft Office
+                <input type="checkbox" name="skill" value="premiere">Premiere
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>Say something</b></td>
+            <td>
+                <textarea placeholder="Say something here."></textarea>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
